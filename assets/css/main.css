@@ -29,6 +29,111 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+.everything{
+	animation: transitionIn 1s;
+
+}
+@keyframes transitionIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.timeline{
+	position: relative;
+	max-width: 1200px;
+	margin: 30px auto;
+}
+
+.container{
+	padding: 10px 50px;
+	position: relative;
+	width: 90%;
+}
+
+.left-container{
+	left: 0;
+}
+
+.right-container{
+	left: 10%;
+}
+
+.container img{
+	position: absolute;
+	width: 80px;
+	border-radius: 50%;
+	right: -20px;
+	top: 32px;
+	z-index: 10;
+}
+
+.right-container img{
+	left: -20px;
+}
+
+.timeline::after{
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	margin-left: -3px;
+	z-index: -1;
+}
+
+.skill{
+	width: 500px;
+	left: 10%;
+	color: #ffff;
+}
+
+
+.skill dd{
+	margin: 200px 0;
+	padding: 12px;
+}
+
+.bar span{
+	height: 20px;
+	float: left;
+	background: linear-gradient(135deg, rgb(89, 195, 245)0%, rgb(0, 17, 255) 100%)
+}
+
+.python{
+	width: 80%;
+}
+.sql{
+	width: 65%;
+}
+.java{
+	width: 40%;
+}
+
+
+.bar{
+	background: #636363;
+	display: block;
+	height: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	overflow:hidden;
+}
+
+
+.text-box{
+	padding: 20px 30px;
+	background: #ffff;
+	position: relative;
+	border-radius: 6px;
+	font-size: 15px;
+}
+
+
 body {
 	line-height: 1;
 }
@@ -100,21 +205,22 @@ input, select, textarea {
 
 	body {
 		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #3288eb 15%, #31ac64 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #3288eb 15%, #31ac64 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #3288eb 15%, #31ac64 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #3288eb 15%, #31ac64 85%);
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #2c2c2c 15%, #31ac64 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #2c2c2c 15%, #31ac64 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #2c2c2c 15%, #31ac64 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #2c2c2c 15%, #31ac64 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
+			-moz-transition: opacity 1.5s ease;
+				-webkit-transition: opacity 1.5s ease;
+				-ms-transition: opacity 1.5s ease;
+				transition: opacity 1.5s ease;
+				-moz-transition-delay: 0.25s;
+				-webkit-transition-delay: 0.25s;
+				-ms-transition-delay: 0.25s;
+				transition-delay: 0.25s;
+				opacity: 1;
 		}
 
 /* Type */
@@ -3086,7 +3192,11 @@ input, select, textarea {
 		}
 
 		#header.alt {
-			padding: 7em 5em 4em 5em ;
+			padding: 5em 4em 3em 4em ;
+		}
+
+		#header.small {
+			padding: 2em 2em 2em 2em ;
 		}
 
 			#header.alt h1 {
@@ -3094,14 +3204,14 @@ input, select, textarea {
 			}
 
 			#header.alt > * {
-				-moz-transition: opacity 3s ease;
-				-webkit-transition: opacity 3s ease;
-				-ms-transition: opacity 3s ease;
-				transition: opacity 3s ease;
-				-moz-transition-delay: 0.5s;
-				-webkit-transition-delay: 0.5s;
-				-ms-transition-delay: 0.5s;
-				transition-delay: 0.5s;
+				-moz-transition: opacity 1.5s ease;
+				-webkit-transition: opacity 1.5s ease;
+				-ms-transition: opacity 1.5s ease;
+				transition: opacity 1.5s ease;
+				-moz-transition-delay: 0.25s;
+				-webkit-transition-delay: 0.25s;
+				-ms-transition-delay: 0.25s;
+				transition-delay: 0.25s;
 				opacity: 1;
 			}
 
@@ -3337,6 +3447,7 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		border-radius: 0.25em;
+
 	}
 
 		#main input, #main select, #main textarea {
